@@ -1,0 +1,27 @@
+#program to remove duplicates from a digit
+n=int(input())
+l=[]
+while n>0:
+    c=n%10
+    n=n//10
+    l.append(c)
+print(l)
+l.reverse()
+res=[]
+for i in l:
+    if i not in res:
+        res.append(i)
+print(res)
+k=len(res)
+print(k)
+s=0
+for i in range(0,k):
+    s=((10**1)*s)+res[i]
+print(s)
+
+Output:
+5435564564576657658
+[8, 5, 6, 7, 5, 6, 6, 7, 5, 4, 6, 5, 4, 6, 5, 5, 3, 4, 5]
+[5, 4, 3, 6, 7, 8]
+6
+543678
